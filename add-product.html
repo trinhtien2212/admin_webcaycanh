@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,8 +87,8 @@
                             <a href="#"><i class="fas fa-tasks"></i> <span>Quản lí</span> <span class="menu-arrow"></span></a>
                             <ul style="display: none;">
                                 <li><a href="categories.html">Danh mục</a></li>
-                                <li><a href="product.html" >Sản phẩm</a></li>
-                                <li><a href="blog.html" class="active">Blog</a></li>
+                                <li><a href="product.html" class="active">Sản phẩm</a></li>
+                                <li><a href="blog.html">Blog</a></li>
                                 <li><a href="coupon-code-type.html">Loại mã giảm giá</a></li>
                                 <li><a href="coupon-code.html">Mã giảm giá</a></li>
                                 <li><a href="ratingstype.html">Loại đánh giá</a></li>
@@ -135,13 +136,13 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h3 class="page-title">Blog</h3>
+							<h3 class="page-title">Sản phẩm</h3>
 						</div>
 						<div class="col-auto text-right">
 							<a class="btn btn-white filter-btn" href="javascript:void(0);" id="filter_search">
 								<i class="fas fa-filter"></i>
 							</a>
-							<a href="add-blog.html" class="btn btn-primary add-button ml-3">
+							<a href="add-category.html" class="btn btn-primary add-button ml-3">
 								<i class="fas fa-plus"></i>
 							</a>
 						</div>
@@ -155,12 +156,32 @@
 						<form action="#" method="post">
 							<div class="row filter-row">
 
-                                <!-- thay đổi ở đây ************************ -->
+								<!-- thay đổi ở đây ************************ -->
+								<div class="col-sm-6 col-md-3">
+									<div class="form-group">
+										<label>Mã sản phẩm</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<div class="form-group">
+										<label>Tên sản phẩm</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
                                 <!-- Thay đổi theo danh sách đề mục -->
 								<div class="col-sm-6 col-md-3">
 									<div class="form-group">
-										<label>Tên</label>
-										<input class="form-control" type="text">
+										<label>Category</label>
+										<select class="form-control select">
+											<option>Chọn Danh Mục</option>
+											<option>Cây để bàn</option>
+											<option>Cây dây leo</option>
+											<option>Cây tết</option>
+											<option>Cây thủy sinh</option>
+											<option>Cây trong nhà</option>
+											<option>Cây ngoài vườn</option>
+										</select>
 									</div>
 								</div>
 								<div class="col-sm-6 col-md-3">
@@ -197,103 +218,78 @@
 								<div class="table-responsive">
 									<table class="table table-hover table-center mb-0 datatable">
                                         <!-- Thay đổi code ở đây Thay đổi theo file word -->
-										<thead>
-											<tr>
-												<th>ID</th>
-												<th>Tên</th>
-												<th>Ngày tạo</th>
-												<th>Hiển thị</th>
-												<th class="text-right">Hành Động</th>
-											</tr>
-                                        </thead>
-                                        
+                                        <!-- Form -->
+								<form action="categories.html">
+									
+									<div class="form-group">
+										<label>Ảnh</label>
+										<input class="form-control" type="file">
+									</div>
+									<div class="form-group">
+										<div class="avatar">
+											<img class="avatar-img rounded" alt="" src="">
+										</div>
+                                    </div>
+                                    <div class="form-group">
+										<label>Tên sản phẩm</label>
+										<input class="form-control" type="text" value="">
+                                    </div>
+                                    <div class="form-group">
+										<label>Danh mục</label>
+										<input class="form-control" type="text" value="">
+                                    </div>
+                                    <div class="form-group">
+										<label>Giá khuyến mãi</label>
+										<input class="form-control" type="text" value="">
+                                    </div>
+                                    <div class="status-toggle">
+                                        <label>Có khuyến mãi không</label>
+                                        <input id="rating_1" class="check" type="checkbox" checked>
+                                        <label for="rating_1" class="checktoggle">checkbox</label>
+                                    </div>
+                                    <div class="form-group">
+										<label>Số lượng</label>
+										<input class="form-control" type="text" value="">
+                                    </div>
+                                    <div class="form-group">
+										<label>Loại</label><br>
+										<select class="form-control select">
+											<option>Chọn Danh Mục</option>
+											<option>Lớn</option>
+											<option>Trung Bình</option>
+											<option>Nhỏ</option>
+										</select>
+                                    </div>
+                                    <div class="form-group">
+										<label>Thời gian bảo hành</label>
+										<input class="form-control" type="text" value="">
+                                    </div>
+                                    <div class="status-toggle">
+                                        <label>Hiển thị</label>
+                                        <input id="rating_2" class="check" type="checkbox" checked>
+                                        <label for="rating_2" class="checktoggle">checkbox</label>
+                                    </div>
+                                    <div class="form-group">
+										<label>Mô tả ngắn</label>
+                                        <textarea style="height: 100px;" class="form-control" type="text"></textarea>
+                                    </div>
+                                    <div class="status-toggle">
+                                        <label>Hiển thị ở mục nổi bật</label>
+                                        <input id="rating_3" class="check" type="checkbox" checked>
+                                        <label for="rating_3" class="checktoggle">checkbox</label>
+                                    </div>
+                                    <div class="status-toggle">
+                                        <label>Hiển thị mới nhất</label>
+                                        <input id="rating_4" class="check" type="checkbox" checked>
+                                        <label for="rating_4" class="checktoggle">checkbox</label>
+                                    </div>
+									<div class="mt-4">
+										<button class="btn btn-primary" type="submit">Save Changes</button>
+										<a href="categories.html" class="btn btn-link">Cancel</a>
+									</div>
+								</form>
+								<!-- /Form -->
                                         <!-- Thêm vào nội dung ở đây -->
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td>Sen đá mini kèm chậu</td>
-												<td>11 Tháng Chín 2020</td>
-												<td>
-													<div class="status-toggle">
-														<input id="rating_1" class="check" type="checkbox" checked>
-														<label for="rating_1" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													<a href="edit-blog.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
-												</td>>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>Cây Bình An</td>
-												<td>10 Tháng Chín 2020</td>
-												<td>
-													<div class="status-toggle">
-														<input id="rating_1" class="check" type="checkbox" checked>
-														<label for="rating_1" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													<a href="edit-blog.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
-												</td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>Cây Cúc Mai</td>
-												<td>9 Tháng Chín 2020</td>
-												<td>
-													<div class="status-toggle">
-														<input id="rating_1" class="check" type="checkbox" checked>
-														<label for="rating_1" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													<a href="edit-blog.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
-												</td>
-											</tr>
-											<tr>
-												<td>4</td>
-												<td>Cây Phú Qúy</td>
-												<td>8 Tháng Chín 2020</td>
-												<td>
-													<div class="status-toggle">
-														<input id="rating_1" class="check" type="checkbox" checked>
-														<label for="rating_1" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													<a href="edit-blog.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
-												</td>
-											</tr>
-											<tr>
-												<td>5</td>
-												<td>Cây Hoàng Tử Bạch Mã</td>
-												<td>7 Tháng Chín 2020</td>
-												<td>
-													<div class="status-toggle">
-														<input id="rating_1" class="check" type="checkbox" checked>
-														<label for="rating_1" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													<a href="edit-blog.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
-												</td>
-											</tr>
-											<tr>
-												<td>6</td>
-												<td>Cây Ánh Dương</td>
-												<td>6 Tháng Chín 2020</td>
-												<td>
-													<div class="status-toggle">
-														<input id="rating_1" class="check" type="checkbox" checked>
-														<label for="rating_1" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													<a href="edit-blog.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
-												</td>
-											</tr>
-										</tbody>
 									</table>
 								</div>
 							</div>
@@ -320,9 +316,10 @@
 
 	<!-- Datatables JS -->
 	<script src="assets/plugins/datatables/datatables.min.js"></script>
-	
+
 	<!-- Select2 JS -->
 	<script src="assets/js/select2.min.js"></script>
+
 	<!-- Custom JS -->
 	<script src="assets/js/admin.js"></script>
 
