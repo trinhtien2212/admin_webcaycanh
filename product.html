@@ -25,7 +25,8 @@
 
 	<!-- Animate CSS -->
 	<link rel="stylesheet" href="assets/css/animate.min.css">
-
+	<!-- Select CSS -->
+	<link rel="stylesheet" href="assets/css/select2.min.css">
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="assets/css/admin.css">
 
@@ -154,7 +155,19 @@
 						<form action="#" method="post">
 							<div class="row filter-row">
 
-                                <!-- thay đổi ở đây ************************ -->
+								<!-- thay đổi ở đây ************************ -->
+								<div class="col-sm-6 col-md-3">
+									<div class="form-group">
+										<label>Mã sản phẩm</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<div class="form-group">
+										<label>Tên sản phẩm</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
                                 <!-- Thay đổi theo danh sách đề mục -->
 								<div class="col-sm-6 col-md-3">
 									<div class="form-group">
@@ -206,9 +219,13 @@
                                         <!-- Thay đổi code ở đây Thay đổi theo file word -->
 										<thead>
 											<tr>
-												<th>#</th>
-												<th>Danh Mục</th>
-												<th>Ngày</th>
+												<th>id</th>
+												<th>Ảnh</th>
+												<th>Tên sản phẩm</th>
+												<th>Danh mục</th>
+												<th>Giá</th>
+												<th>Số lượng</th>
+												<th>Hiển thị</th>
 												<th class="text-right">Hành Động</th>
 											</tr>
                                         </thead>
@@ -217,9 +234,17 @@
 										<tbody>
 											<tr>
 												<td>1</td>
+												<td><img class="rounded service-img mr-1" src="assets/img/categories/cay-de-ban.jpg" alt="Hình ảnh danh mục"></td>
+												<td>Sen đá mini kèm chậu</td>
+												<td>Cây để bàn</td>
+												<td>50.000VNĐ</td>
+												<td>10</td>
 												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-de-ban.jpg" alt="Hình ảnh danh mục">Cây để bàn</td>
-												<td>11 Tháng Chính 2020</td>
+													<div class="status-toggle">
+														<input id="rating_1" class="check" type="checkbox" checked>
+														<label for="rating_1" class="checktoggle">checkbox</label>
+													</div>
+												</td>
 												<td class="text-right">
 													<a href="edit-category.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
 												</td>
@@ -227,8 +252,17 @@
 											<tr>
 												<td>2</td>
 												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-day-leo.jpg" alt="Hình ảnh danh mục">Cây dây leo</td>
-												<td>10 Tháng Chín 2020</td>
+													<img class="rounded service-img mr-1" src="assets/img/categories/cay-day-leo.jpg" alt="Hình ảnh danh mục"></td>
+													<td>Cây Bình An</td>
+													<td>Cây dây leo</td>
+													<td>149.000 VNĐ</td>
+													<td>10</td>
+													<td>
+														<div class="status-toggle">
+															<input id="rating_2" class="check" type="checkbox" checked>
+															<label for="rating_2" class="checktoggle">checkbox</label>
+														</div>
+													</td>
 												<td class="text-right">
 													<a href="edit-category.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
 												</td>
@@ -236,8 +270,17 @@
 											<tr>
 												<td>3</td>
 												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-tet.jpg" alt="Hình ảnh danh mục">Cây tết</td>
-												<td>9 Tháng Chín 2020</td>
+													<img class="rounded service-img mr-1" src="assets/img/categories/cay-tet.jpg" alt="Hình ảnh danh mục"></td>
+													<td>Cây Cúc Mai</td>
+													<td>Cây tết</td>
+													<td>563.000 VNĐ</td>
+													<td>10</td>
+													<td>
+														<div class="status-toggle">
+															<input id="rating_3" class="check" type="checkbox" checked>
+															<label for="rating_3" class="checktoggle">checkbox</label>
+														</div>
+													</td>
 												<td class="text-right">
 													<a href="edit-category.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
 												</td>
@@ -245,8 +288,17 @@
 											<tr>
 												<td>4</td>
 												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-thuy-sinh.jpg" alt="Hình ảnh danh mục">Cây thủy sinh</td>
-												<td>8 Tháng Chín 2020</td>
+													<img class="rounded service-img mr-1" src="assets/img/categories/cay-thuy-sinh.jpg" alt="Hình ảnh danh mục"></td>
+													<td>Cây Phú Qúy</td>
+													<td>Cây thủy sinh</td>
+													<td>49.000 VNĐ</td>
+													<td>10</td>
+													<td>
+														<div class="status-toggle">
+															<input id="rating_4" class="check" type="checkbox" checked>
+															<label for="rating_4" class="checktoggle">checkbox</label>
+														</div>
+													</td>
 												<td class="text-right">
 													<a href="edit-category.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
 												</td>
@@ -254,8 +306,17 @@
 											<tr>
 												<td>5</td>
 												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-trong-nha.jpg" alt="Hình ảnh danh mục">Cây trong nhà</td>
-												<td>7 Tháng Chín 2020</td>
+													<img class="rounded service-img mr-1" src="assets/img/categories/cay-trong-nha.jpg" alt="Hình ảnh danh mục"></td>
+													<td>Cây Hoàng Tử Bạch Mã</td>
+													<td>Cây trong nhà</td>
+													<td>350.000 VNĐ</td>
+													<td>10</td>
+													<td>
+														<div class="status-toggle">
+															<input id="rating_5" class="check" type="checkbox" checked>
+															<label for="rating_5" class="checktoggle">checkbox</label>
+														</div>
+													</td>
 												<td class="text-right">
 													<a href="edit-category.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
 												</td>
@@ -263,8 +324,17 @@
 											<tr>
 												<td>6</td>
 												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-ngoai-vuon.jpg" alt="Hình ảnh danh mục">Cây ngoài vườn</td>
-												<td>6 Tháng Chín 2020</td>
+													<img class="rounded service-img mr-1" src="assets/img/categories/cay-ngoai-vuon.jpg" alt="Hình ảnh danh mục"></td>
+													<td>Cây Ánh Dương</td>
+													<td>Cây ngoài vườn</td>
+													<td>250.000 VNĐ</td>
+													<td>10</td>
+													<td>
+														<div class="status-toggle">
+															<input id="rating_6" class="check" type="checkbox" checked>
+															<label for="rating_6" class="checktoggle">checkbox</label>
+														</div>
+													</td>
 												<td class="text-right">
 													<a href="edit-category.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
 												</td>
@@ -296,6 +366,9 @@
 
 	<!-- Datatables JS -->
 	<script src="assets/plugins/datatables/datatables.min.js"></script>
+
+	<!-- Select2 JS -->
+	<script src="assets/js/select2.min.js"></script>
 
 	<!-- Custom JS -->
 	<script src="assets/js/admin.js"></script>
