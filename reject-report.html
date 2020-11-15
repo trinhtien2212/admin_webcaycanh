@@ -5,7 +5,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 	<title>Truelysell | Template</title>
-	<link href="assets/img/icon/icon-logo.png" rel="shortcut icon">
 
 	<!-- Favicons -->
 	<link rel="shortcut icon" href="assets/img/favicon.png">
@@ -16,10 +15,19 @@
 	<!-- Fontawesome CSS -->
 	<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
 	<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	 
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Datepicker CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+	<!-- Datatables CSS -->
+	<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
 	<!-- Animate CSS -->
 	<link rel="stylesheet" href="assets/css/animate.min.css">
+
+	<!-- Select CSS -->
+	<link rel="stylesheet" href="assets/css/select2.min.css">
 
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="assets/css/admin.css">
@@ -209,7 +217,7 @@
 			<div class="sidebar-inner slimscroll">
 				<div id="sidebar-menu" class="sidebar-menu">
 					<ul>
-						<li class="active">
+						<li >
 							<a href="index.html"><i class="fas fa-columns"></i> <span>Dashboard</span></a>
 						</li>
 						<li>
@@ -217,7 +225,7 @@
 						</li>
 						
 						
-						<li>
+						<li class="active">
 							<a href="total-report.html"><i class="far fa-calendar-check"></i> <span>Danh sách đặt hàng</span></a>
 						</li>
 						
@@ -313,133 +321,368 @@
 			</div>
 		</div>
 		<!-- /Sidebar -->
+		
 		<div class="page-wrapper">
 			<div class="content container-fluid">
 			
 				<!-- Page Header -->
 				<div class="page-header">
 					<div class="row">
-						<div class="col-12">
-							<h3 class="page-title">Welcome Admin!</h3>
+						<div class="col">
+							<h3 class="page-title">Danh sách đặt hàng</h3>
+						</div>
+						<div class="col-auto text-right">
+							<a class="btn btn-white filter-btn" href="javascript:void(0);" id="filter_search">
+								<i class="fas fa-filter"></i>
+							</a>
 						</div>
 					</div>
 				</div>
 				<!-- /Page Header -->
 				
-				<div class="row">
-					<div class="col-xl-3 col-sm-6 col-12">
-						<div class="card">
-							<div class="card-body">
-								<div class="dash-widget-header">
-									<span class="dash-widget-icon bg-primary">
-										<i class="far fa-user"></i>
-									</span>
-									<div class="dash-widget-info">
-										<h3>429</h3>
-										<h6 class="text-muted">Người dùng</h6>
+				<!-- Search Filter -->
+				<div class="card filter-card" id="filter_inputs">
+					<div class="card-body pb-0">
+						<form>
+							<div class="row filter-row">
+								 <div class="col-sm-6 col-md-3">
+									<div class="form-group">
+										<label class="col-form-label">From Date</label>
+										<div class="cal-icon">
+											<input class="form-control datetimepicker" type="text">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<div class="form-group">
+										<label class="col-form-label">To Date</label>
+										<div class="cal-icon">
+											<input class="form-control datetimepicker" type="text">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<div class="form-group">
+										<button class="btn btn-primary btn-block" type="submit">Submit</button>
 									</div>
 								</div>
 							</div>
-						</div>
+						</form>
 					</div>
 				</div>
+				<!-- /Search Filter -->
+				
+				<ul class="nav nav-tabs menu-tabs">
+					<li class="nav-item">
+						<a class="nav-link" href="total-report.html">Tất cả <span class="badge badge-primary">550</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="pending-report.html">Chờ xử lí <span class="badge badge-primary">125</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="inprogress-report.html">Đang xử lí <span class="badge badge-primary">86</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="complete-report.html">Hoàn tất <span class="badge badge-primary">89</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="reject-report.html">Bị từ chối <span class="badge badge-primary">101</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="cancel-report.html">Đã hủy <span class="badge badge-primary">121</span></a>
+					</li>
+				</ul>
+				
 				<div class="row">
-					<div class="col-md-12 d-flex">
-					
-						<!-- Recent Bookings -->
-						<div class="card card-table flex-fill">
-							<div class="card-header">
-								<h4 class="card-title">Đặt hàng gần đây</h4>
-							</div>
+					<div class="col-md-12">
+						<div class="card">
 							<div class="card-body">
 								<div class="table-responsive">
-									<table class="table table-center">
+									<table class="table table-hover table-center mb-0 datatable">
 										<thead>
 											<tr>
+												<th>#</th>
+												<th>Ngày đặt</th>
 												<th>Tên khách hàng</th>
-												<th>Ngày sản phẩm</th>
-												<th>Tên mặt hàng</th>
-												<th>Trạng thái</th>
+												<!-- <th>Provider</th> -->
+												<th>Tên sản phẩm</th>
 												<th>Tổng tiền</th>
+												<th>Trạng thái</th>
+												<th>Cập Nhật</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td class="text-nowrap">
-													<img class="avatar-xs rounded-circle" src="assets/img/customer/user5.jpg" alt="User Image"> Annette Silva
+												<td>1</td>
+												<td>12 Sep 2020</td>
+												<td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user5.jpg">
+														</a>
+														<a href="javascript:void(0);">Annette Silva</a>
+													</span>
 												</td>
-												<td class="text-nowrap">9 Sep 2020</td>
+												<!-- <td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-05.jpg">
+														</a>
+														<a href="javascript:void(0);">Maritza Wasson</a>
+													</span>
+												</td> -->
 												<td>Cây Móng Rồng</td>
+												<td>64.000 VNĐ</td>
 												<td>
-													<span class="badge bg-danger inv-badge">Đang chờ xử lý</span>
+													<label class="badge badge-warning">Bị từ chối</label>
 												</td>
-												<td>
-													<div class="font-weight-600">64.000 VNĐ</div>
-												</td>
+												<td>Hôm qua 01:21 PM</td>
 											</tr>
 											<tr>
-												<td class="text-nowrap">
-													<img class="avatar-xs rounded-circle" src="assets/img/customer/user6.jpg" alt="User Image"> Stephen Wilson</td>
-												<td class="text-nowrap">8 Sep 2020</td>
+												<td>2</td>
+												<td>11 Sep 2020</td>
+												<td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user6.jpg">
+														</a>
+														<a href="javascript:void(0);">Stephen Wilson</a>
+													</span>
+												</td>
+												<!-- <td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-06.jpg">
+														</a>
+														<a href="javascript:void(0);">Marya Ruiz</a>
+													</span>
+												</td> -->
 												<td>Sen Đá Mini Kèm Chậu</td>
+												<td>50.000 VNĐ</td>
 												<td>
-													<span class="badge bg-danger inv-badge">Đang chờ xử lý</span>
+													<label class="badge badge-warning">Bị từ chối</label>
 												</td>
-												<td>
-													<div class="font-weight-600">50.000 VNĐ</div>
-												</td>
+												<td>Hôm qua 01:03 PM</td>
 											</tr>
 											<tr>
-												<td class="text-nowrap">
-													<img class="avatar-xs rounded-circle" src="assets/img/customer/user7.jpg" alt="User Image"> Ryan Rodriguez</td>
-												<td class="text-nowrap">7 Sep 2020</td>
+												<td>3</td>
+												<td>10 Sep 2020</td>
+												<td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user7.jpg">
+														</a>
+														<a href="javascript:void(0);">Ryan Rodriguez</a>
+													</span>
+												</td>
+												<!-- <td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-07.jpg">
+														</a>
+														<a href="javascript:void(0);">Richard Hughes</a>
+													</span>
+												</td> -->
 												<td>Cây Cẩm Nhung</td>
+												<td>39.000 VNĐ</td>
 												<td>
-													<span class="badge bg-danger inv-badge">Đang chờ xử lý</span>
+													<label class="badge badge-warning">Bị từ chối</label>
 												</td>
-												<td>
-													<div class="font-weight-600">39.000 VNĐ</div>
-												</td>
+												<td>10 Sep 2020 08:03 PM</td>
 											</tr>
 											<tr>
-												<td class="text-nowrap">
-													<img class="avatar-xs rounded-circle" src="assets/img/customer/user8.jpg" alt="User Image"> Lucile Devera
+												<td>4</td>
+												<td>9 Sep 2020</td>
+												<td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user8.jpg">
+														</a>
+														<a href="javascript:void(0);">Lucile Devera</a>
+													</span>
 												</td>
-												<td class="text-nowrap">6 Sep 2020</td>
+												<!-- <td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-08.jpg">
+														</a>
+														<a href="javascript:void(0);">Nina Wilson</a>
+													</span>
+												</td> -->
 												<td>Xương Rồng Tai Thỏ</td>
+												<td>36.000 VNĐ</td>
 												<td>
-													<span class="badge bg-danger inv-badge">Đang chờ xử lý</span>
+													<label class="badge badge-warning">Bị từ chối</label>
 												</td>
-												<td>
-													<div class="font-weight-600">36.000 VNĐ</div>
-												</td>
+												<td>9 Sep 2020 09:38 PM</td>
 											</tr>
 											<tr>
-												<td class="text-nowrap">
-													<img class="avatar-xs rounded-circle" src="assets/img/customer/user9.jpg" alt="User Image"> Roland Storey</td>
-												<td class="text-nowrap">5 Sep 2020</td>
+												<td>5</td>
+												<td>8 Sep 2020</td>
+												<td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user9.jpg">
+														</a>
+														<a href="javascript:void(0);">Roland Storey</a>
+													</span>
+												</td>
+												<!-- <td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-09.jpg">
+														</a>
+														<a href="javascript:void(0);">David Morrison</a>
+													</span>
+												</td> -->
 												<td>Xương Rồng Astro</td>
+												<td>79.000 VNĐ</td>
 												<td>
-													<span class="badge bg-danger inv-badge">Đang chờ xử lý</span>
+													<label class="badge badge-warning">Bị từ chối</label>
 												</td>
+												<td>8 Sep 2020 09:37 PM</td>
+											</tr>
+											<tr>
+												<td>6</td>
+												<td>7 Sep 2020</td>
 												<td>
-													<div class="font-weight-600">79.000 VNĐ</div>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user10.jpg">
+														</a>
+														<a href="javascript:void(0);">Lindsey Parmley</a>
+													</span>
 												</td>
+												<!-- <td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-10.jpg">
+														</a>
+														<a href="javascript:void(0);">Linda Brooks</a>
+													</span>
+												</td> -->
+												<td>Xương Rồng Núi</td>
+												<td>66.000 VNĐ</td>
+												<td>
+													<label class="badge badge-warning">Bị từ chối</label>
+												</td>
+												<td>7 Sep 2020 06:27 PM</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td>6 Sep 2020</td>
+												<td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user1.jpg">
+														</a>
+														<a href="javascript:void(0);">Jeffrey Akridge</a>
+													</span>
+												</td>
+												<!-- <td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-01.jpg">
+														</a>
+														<a href="javascript:void(0);">Thomas Herzberg</a>
+													</span>
+												</td> -->
+												<td>Sen Đá Hồng Hà Lan</td>
+												<td>39.000 VNĐ</td>
+												<td>
+													<label class="badge badge-warning">Bị từ chối</label>
+												</td>
+												<td>Hôm nay 01:38 PM</td>
+											</tr>
+											<tr>
+												<td>8</td>
+												<td>5 Sep 2020</td>
+												<td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user2.jpg">
+														</a>
+														<a href="javascript:void(0);">Nancy Olson</a>
+													</span>
+												</td>
+												<!-- <td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-02.jpg">
+														</a>
+														<a href="javascript:void(0);">Matthew Garcia</a>
+													</span>
+												</td> -->
+												<td>Sen Đá Kim Cương Trắng</td>
+												<td>49.000 VNĐ</td>
+												<td>
+													<label class="badge badge-warning">Bị từ chối</label>
+												</td>
+												<td>Hôm qua 01:35 PM</td>
+											</tr>
+											<tr>
+												<td>9</td>
+												<td>4 Sep 2020</td>
+												<td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user3.png">
+														</a>
+														<a href="javascript:void(0);">Ramona Kingsley</a>
+													</span>
+												</td>
+												<!-- <td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-03.jpg">
+														</a>
+														<a href="javascript:void(0);">Yolanda Potter</a>
+													</span>
+												</td> -->
+												<td>Xương Rồng Trứng Chim Lớn</td>
+												<td>29.000 VNĐ</td>
+												<td>
+													<label class="badge badge-warning">Bị từ chối</label>
+												</td>
+												<td>Hôm qua 01:31 PM</td>
+											</tr>
+											<tr>
+												<td>10</td>
+												<td>3 Sep 2020</td>
+												<td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user4.jpg">
+														</a>
+														<a href="javascript:void(0);">Ricardo Lung</a>
+													</span>
+												</td>
+												<!-- <td>
+													<span class="table-avatar">
+														<a href="#" class="avatar avatar-sm mr-2">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-04.jpg">
+														</a>
+														<a href="javascript:void(0);">Ricardo Flemings</a>
+													</span>
+												</td> -->
+												<td>Cây Dứa Cảnh Nến</td>
+												<td>130.000 VNĐ</td>
+												<td>
+													<label class="badge badge-warning">Bị từ chối</label>
+												</td>
+												<td>Hôm qua 01:29 PM</td>
 											</tr>
 										</tbody>
 									</table>
 								</div>
 							</div>
 						</div>
-						<!-- /Recent Bookings -->
-						
 					</div>
-					</div>
-				</div> 
+				</div>
 			</div>
-		</div> 
+		</div>
 	</div>
-
+	
 	<!-- jQuery -->
 	<script src="assets/js/jquery-3.5.0.min.js"></script>
 
@@ -447,11 +690,22 @@
 	<script src="assets/js/popper.min.js"></script>
 	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
+	<!-- Datepicker Core JS -->
+	<script src="assets/js/moment.min.js"></script>
+	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
 	<!-- Slimscroll JS -->
 	<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
+	<!-- Datatables JS -->
+	<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/datatables/datatables.min.js"></script>
+
+	<!-- Select2 JS -->
+	<script src="assets/js/select2.min.js"></script>
+
 	<!-- Custom JS -->
-	<script src="assets/js/admin.js"></script>
+	<script src="assets/js/admin.js"></script> 
 
 </body>
 
