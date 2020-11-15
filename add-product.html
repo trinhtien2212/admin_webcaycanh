@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,8 +113,7 @@
                             <a href="#"><i class="fas fa-users"></i><span>Người dùng</span> <span class="menu-arrow"></span></a>
                             <ul style="display: none;">
                                 <li><a href="users.html">Khách hàng</a></li>
-								<li><a href="admin-list.html">Danh sách admin</a></li>
-								<li><a href="service-list.html">Nhà cung cấp</a></li>
+                                <li><a href="admin-list.html">Danh sách admin</a></li>
                                 
                             </ul>
                         </li>
@@ -142,7 +142,7 @@
 							<a class="btn btn-white filter-btn" href="javascript:void(0);" id="filter_search">
 								<i class="fas fa-filter"></i>
 							</a>
-							<a href="add-product.html" class="btn btn-primary add-button ml-3">
+							<a href="add-category.html" class="btn btn-primary add-button ml-3">
 								<i class="fas fa-plus"></i>
 							</a>
 						</div>
@@ -218,129 +218,78 @@
 								<div class="table-responsive">
 									<table class="table table-hover table-center mb-0 datatable">
                                         <!-- Thay đổi code ở đây Thay đổi theo file word -->
-										<thead>
-											<tr>
-												<th>id</th>
-												<th>Ảnh</th>
-												<th>Tên sản phẩm</th>
-												<th>Danh mục</th>
-												<th>Giá</th>
-												<th>Số lượng</th>
-												<th>Hiển thị</th>
-												<th class="text-right">Hành Động</th>
-											</tr>
-                                        </thead>
-                                        
+                                        <!-- Form -->
+								<form action="categories.html">
+									
+									<div class="form-group">
+										<label>Ảnh</label>
+										<input class="form-control" type="file">
+									</div>
+									<div class="form-group">
+										<div class="avatar">
+											<img class="avatar-img rounded" alt="" src="">
+										</div>
+                                    </div>
+                                    <div class="form-group">
+										<label>Tên sản phẩm</label>
+										<input class="form-control" type="text" value="">
+                                    </div>
+                                    <div class="form-group">
+										<label>Danh mục</label>
+										<input class="form-control" type="text" value="">
+                                    </div>
+                                    <div class="form-group">
+										<label>Giá khuyến mãi</label>
+										<input class="form-control" type="text" value="">
+                                    </div>
+                                    <div class="status-toggle">
+                                        <label>Có khuyến mãi không</label>
+                                        <input id="rating_1" class="check" type="checkbox" checked>
+                                        <label for="rating_1" class="checktoggle">checkbox</label>
+                                    </div>
+                                    <div class="form-group">
+										<label>Số lượng</label>
+										<input class="form-control" type="text" value="">
+                                    </div>
+                                    <div class="form-group">
+										<label>Loại</label><br>
+										<select class="form-control select">
+											<option>Chọn Danh Mục</option>
+											<option>Lớn</option>
+											<option>Trung Bình</option>
+											<option>Nhỏ</option>
+										</select>
+                                    </div>
+                                    <div class="form-group">
+										<label>Thời gian bảo hành</label>
+										<input class="form-control" type="text" value="">
+                                    </div>
+                                    <div class="status-toggle">
+                                        <label>Hiển thị</label>
+                                        <input id="rating_2" class="check" type="checkbox" checked>
+                                        <label for="rating_2" class="checktoggle">checkbox</label>
+                                    </div>
+                                    <div class="form-group">
+										<label>Mô tả ngắn</label>
+                                        <textarea style="height: 100px;" class="form-control" type="text"></textarea>
+                                    </div>
+                                    <div class="status-toggle">
+                                        <label>Hiển thị ở mục nổi bật</label>
+                                        <input id="rating_3" class="check" type="checkbox" checked>
+                                        <label for="rating_3" class="checktoggle">checkbox</label>
+                                    </div>
+                                    <div class="status-toggle">
+                                        <label>Hiển thị mới nhất</label>
+                                        <input id="rating_4" class="check" type="checkbox" checked>
+                                        <label for="rating_4" class="checktoggle">checkbox</label>
+                                    </div>
+									<div class="mt-4">
+										<button class="btn btn-primary" type="submit">Save Changes</button>
+										<a href="categories.html" class="btn btn-link">Cancel</a>
+									</div>
+								</form>
+								<!-- /Form -->
                                         <!-- Thêm vào nội dung ở đây -->
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td><img class="rounded service-img mr-1" src="assets/img/categories/cay-de-ban.jpg" alt="Hình ảnh danh mục"></td>
-												<td>Sen đá mini kèm chậu</td>
-												<td>Cây để bàn</td>
-												<td>50.000VNĐ</td>
-												<td>10</td>
-												<td>
-													<div class="status-toggle">
-														<input id="rating_1" class="check" type="checkbox" checked>
-														<label for="rating_1" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													<a href="edit-product.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
-												</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-day-leo.jpg" alt="Hình ảnh danh mục"></td>
-													<td>Cây Bình An</td>
-													<td>Cây dây leo</td>
-													<td>149.000 VNĐ</td>
-													<td>10</td>
-													<td>
-														<div class="status-toggle">
-															<input id="rating_2" class="check" type="checkbox" checked>
-															<label for="rating_2" class="checktoggle">checkbox</label>
-														</div>
-													</td>
-												<td class="text-right">
-													<a href="edit-product.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
-												</td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-tet.jpg" alt="Hình ảnh danh mục"></td>
-													<td>Cây Cúc Mai</td>
-													<td>Cây tết</td>
-													<td>563.000 VNĐ</td>
-													<td>10</td>
-													<td>
-														<div class="status-toggle">
-															<input id="rating_3" class="check" type="checkbox" checked>
-															<label for="rating_3" class="checktoggle">checkbox</label>
-														</div>
-													</td>
-												<td class="text-right">
-													<a href="edit-product.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
-												</td>
-											</tr>
-											<tr>
-												<td>4</td>
-												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-thuy-sinh.jpg" alt="Hình ảnh danh mục"></td>
-													<td>Cây Phú Qúy</td>
-													<td>Cây thủy sinh</td>
-													<td>49.000 VNĐ</td>
-													<td>10</td>
-													<td>
-														<div class="status-toggle">
-															<input id="rating_4" class="check" type="checkbox" checked>
-															<label for="rating_4" class="checktoggle">checkbox</label>
-														</div>
-													</td>
-												<td class="text-right">
-													<a href="edit-product.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
-												</td>
-											</tr>
-											<tr>
-												<td>5</td>
-												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-trong-nha.jpg" alt="Hình ảnh danh mục"></td>
-													<td>Cây Hoàng Tử Bạch Mã</td>
-													<td>Cây trong nhà</td>
-													<td>350.000 VNĐ</td>
-													<td>10</td>
-													<td>
-														<div class="status-toggle">
-															<input id="rating_5" class="check" type="checkbox" checked>
-															<label for="rating_5" class="checktoggle">checkbox</label>
-														</div>
-													</td>
-												<td class="text-right">
-													<a href="edit-product.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
-												</td>
-											</tr>
-											<tr>
-												<td>6</td>
-												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-ngoai-vuon.jpg" alt="Hình ảnh danh mục"></td>
-													<td>Cây Ánh Dương</td>
-													<td>Cây ngoài vườn</td>
-													<td>250.000 VNĐ</td>
-													<td>10</td>
-													<td>
-														<div class="status-toggle">
-															<input id="rating_6" class="check" type="checkbox" checked>
-															<label for="rating_6" class="checktoggle">checkbox</label>
-														</div>
-													</td>
-												<td class="text-right">
-													<a href="edit-product.html"class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
-												</td>
-											</tr>
-										</tbody>
 									</table>
 								</div>
 							</div>

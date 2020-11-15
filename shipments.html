@@ -25,7 +25,8 @@
 
 	<!-- Animate CSS -->
 	<link rel="stylesheet" href="assets/css/animate.min.css">
-
+	<!-- Select CSS -->
+	<link rel="stylesheet" href="assets/css/select2.min.css">
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="assets/css/admin.css">
 
@@ -158,16 +159,20 @@
                                 <!-- Thay đổi theo danh sách đề mục -->
 								<div class="col-sm-6 col-md-3">
 									<div class="form-group">
-										<label>Category</label>
-										<select class="form-control select">
-											<option>Chọn Danh Mục</option>
-											<option>Cây để bàn</option>
-											<option>Cây dây leo</option>
-											<option>Cây tết</option>
-											<option>Cây thủy sinh</option>
-											<option>Cây trong nhà</option>
-											<option>Cây ngoài vườn</option>
-										</select>
+										<label>Ship id</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<div class="form-group">
+										<label>Mã đặt hàng</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<div class="form-group">
+										<label>Mã khách hàng</label>
+										<input class="form-control" type="text">
 									</div>
 								</div>
 								<div class="col-sm-6 col-md-3">
@@ -206,9 +211,9 @@
                                         <!-- Thay đổi code ở đây Thay đổi theo file word -->
 										<thead>
 											<tr>
-												<th>#</th>
-												<th>Danh Mục</th>
-												<th>Ngày</th>
+												<th>ID</th>
+												<th>Ngày vận chuyển</th>
+												<th>Khối lượng</th>
 												<th class="text-right">Hành Động</th>
 											</tr>
                                         </thead>
@@ -217,56 +222,62 @@
 										<tbody>
 											<tr>
 												<td>1</td>
-												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-de-ban.jpg" alt="Hình ảnh danh mục">Cây để bàn</td>
-												<td>11 Tháng Chính 2020</td>
+												<td>11 Tháng Chín 2020</td>
+												<td>0.5 kg</td>
 												<td class="text-right">
-													<a href="edit-category.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
+													<a href="view-shipments.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
 												</td>
 											</tr>
 											<tr>
 												<td>2</td>
-												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-day-leo.jpg" alt="Hình ảnh danh mục">Cây dây leo</td>
 												<td>10 Tháng Chín 2020</td>
+												<td>1.5 kg</td>
 												<td class="text-right">
-													<a href="edit-category.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
+													<a href="view-shipments.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
 												</td>
 											</tr>
 											<tr>
 												<td>3</td>
-												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-tet.jpg" alt="Hình ảnh danh mục">Cây tết</td>
 												<td>9 Tháng Chín 2020</td>
+												<td>2.5 kg</td>
 												<td class="text-right">
-													<a href="edit-category.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
+													<a href="view-shipments.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
 												</td>
 											</tr>
 											<tr>
 												<td>4</td>
-												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-thuy-sinh.jpg" alt="Hình ảnh danh mục">Cây thủy sinh</td>
 												<td>8 Tháng Chín 2020</td>
+												<td>3.5 kg</td>
 												<td class="text-right">
-													<a href="edit-category.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
+													<a href="view-shipments.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
 												</td>
 											</tr>
 											<tr>
 												<td>5</td>
-												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-trong-nha.jpg" alt="Hình ảnh danh mục">Cây trong nhà</td>
 												<td>7 Tháng Chín 2020</td>
+												<td>4.5 kg</td>
 												<td class="text-right">
-													<a href="edit-category.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
+													<a href="view-shipments.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
 												</td>
 											</tr>
 											<tr>
 												<td>6</td>
-												<td>
-													<img class="rounded service-img mr-1" src="assets/img/categories/cay-ngoai-vuon.jpg" alt="Hình ảnh danh mục">Cây ngoài vườn</td>
 												<td>6 Tháng Chín 2020</td>
+												<td>5.5 kg</td>
 												<td class="text-right">
-													<a href="edit-category.html" class="btn btn-sm bg-success-light mr-2">	<i class="far fa-edit mr-1"></i> Sửa</a>
+													<a href="view-shipments.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
 												</td>
 											</tr>
 										</tbody>
@@ -296,7 +307,8 @@
 
 	<!-- Datatables JS -->
 	<script src="assets/plugins/datatables/datatables.min.js"></script>
-
+	<!-- Select2 JS -->
+	<script src="assets/js/select2.min.js"></script>
 	<!-- Custom JS -->
 	<script src="assets/js/admin.js"></script>
 
