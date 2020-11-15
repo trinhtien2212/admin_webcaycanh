@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-	<title>Truelysell | Template</title>
+	<meta name="Chi tiếtport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>Danh sách đặt hàng</title>
 	<link href="assets/img/icon/icon-logo.png" rel="shortcut icon">
 
 	<!-- Favicons -->
@@ -105,7 +105,7 @@
 								<li><a href="total-report.html" class="active">Danh sách đặt hàng</a></li>
 								<li><a href="shipments.html">Vận chuyển</a></li>
 								<li><a href="return-request.html">Bảo hành</a></li>
-								<li><a href="review-reports.html">Đánh giá sản phẩm</a></li>
+								<li><a href="reChi tiết-reports.html">Đánh giá sản phẩm</a></li>
 								
 								
 							</ul>
@@ -156,7 +156,7 @@
 							<div class="row filter-row">
 								 <div class="col-sm-6 col-md-3">
 									<div class="form-group">
-										<label class="col-form-label">From Date</label>
+										<label class="col-form-label">Từ ngày</label>
 										<div class="cal-icon">
 											<input class="form-control datetimepicker" type="text">
 										</div>
@@ -164,7 +164,7 @@
 								</div>
 								<div class="col-sm-6 col-md-3">
 									<div class="form-group">
-										<label class="col-form-label">To Date</label>
+										<label class="col-form-label">Đến ngày</label>
 										<div class="cal-icon">
 											<input class="form-control datetimepicker" type="text">
 										</div>
@@ -183,25 +183,24 @@
 				
 				<ul class="nav nav-tabs menu-tabs">
 					<li class="nav-item active">
-						<a class="nav-link" href="total-report.html">All Booking <span class="badge badge-primary">550</span></a>
+						<a class="nav-link" href="total-report.html">Tất cả<span class="badge badge-primary">550</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="pending-report.html">Pending <span class="badge badge-primary">125</span></a>
+						<a class="nav-link" href="pending-report.html">Chờ xử lí <span class="badge badge-primary">125</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="inprogress-report.html">InProgress <span class="badge badge-primary">86</span></a>
+						<a class="nav-link" href="inprogress-report.html">Đang xử lí <span class="badge badge-primary">86</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="complete-report.html">Completed <span class="badge badge-primary">89</span></a>
+						<a class="nav-link" href="complete-report.html">Hoàn thành <span class="badge badge-primary">89</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="reject-report.html">Rejected <span class="badge badge-primary">101</span></a>
+						<a class="nav-link" href="reject-report.html">Bị từ chối <span class="badge badge-primary">101</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="cancel-report.html">Canceled <span class="badge badge-primary">121</span></a>
+						<a class="nav-link" href="cancel-report.html">Đã hủy <span class="badge badge-primary">121</span></a>
 					</li>
 				</ul>
-				
 				<div class="row">
 					<div class="col-md-12">
 						<div class="card">
@@ -210,277 +209,306 @@
 									<table class="table table-hover table-center mb-0 datatable">
 										<thead>
 											<tr>
-												<th>#</th>
-												<th>Date</th>
-												<th>User</th>
-												<th>Provider</th>
-												<th>Service</th>
-												<th>Amount</th>
-												<th>Status</th>
-												<th>Updated</th>
+												<th>ID</th>
+												<th>Ngày đặt hàng</th>
+												<th>Khách hàng</th>
+												<th>Sản phẩm</th>
+												<th>Thành tiền</th>
+												<th>Trạng thái</th>
+												<th>Chi tiết</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td>1</td>
-												<td>16 Sep 2020</td>
+												<td>order-01</td>
+												<td>16/9/2020</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user-01.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user1.jpg">
 														</a>
-														<a href="javascript:void(0);">Jeffrey Akridge</a>
+														<a href="javascript:void(0);">Lữ Thanh Hải</a>
 													</span>
 												</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-01.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/product/cam-nhung.jpg">
 														</a>
-														<a href="javascript:void(0);">Thomas Herzberg</a>
+														<a href="javascript:void(0);">Cây cẩm nhung</a>
 													</span>
 												</td>
-												<td>Toughened Glass Fitting Services</td>
-												<td>$25</td>
+												<td>125.000 VNĐ</td>
 												<td>
-													<label class="badge badge-dark">Pending</label>
+													<label class="badge badge-dark">Đang chờ xử lí</label>
 												</td>
-												<td>Today 01:38 PM</td>
+												<td>
+													<a href="service-details.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
+												</td>
 											</tr>
 											<tr>
-												<td>2</td>
-												<td>15 Sep 2020</td>
+												<td>order-02</td>
+												<td>15/9/2020</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user-02.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user2.jpg">
 														</a>
-														<a href="javascript:void(0);">Nancy Olson</a>
+														<a href="javascript:void(0);">Lữ Hà Nam</a>
 													</span>
 												</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-02.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/product/cay-dua-canh-nen-do.jpg">
 														</a>
-														<a href="javascript:void(0);">Matthew Garcia</a>
+														<a href="javascript:void(0);">Cây dứa nến</a>
 													</span>
 												</td>
-												<td>Car Repair Services</td>
-												<td>$50</td>
+												<td>125.000 VNĐ</td>
 												<td>
-													<label class="badge badge-primary">Complete Request</label>
+													<label class="badge badge-primary">Hoàn thành</label>
 												</td>
-												<td>Yesterday 01:35 PM</td>
+												<td>
+													<a href="service-details.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
+												</td>
 											</tr>
 											<tr>
-												<td>3</td>
-												<td>14 Sep 2020</td>
+												<td>order-04</td>
+												<td>15/9/2020</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user-03.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user15.jpg">
 														</a>
-														<a href="javascript:void(0);">Ramona Kingsley</a>
+														<a href="javascript:void(0);">Hà Thanh Nam</a>
 													</span>
 												</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-03.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/product/cay-kim-tien.jpg">
 														</a>
-														<a href="javascript:void(0);">Yolanda Potter</a>
+														<a href="javascript:void(0);">Cây kim tiền</a>
 													</span>
 												</td>
-												<td>Electric Panel Repairing Service</td>
-												<td>$45</td>
+												<td>145.000 VNĐ</td>
 												<td>
-													<label class="badge badge-info">Inprogress</label>
+													<label class="badge badge-info">Đang xử lí</label>
 												</td>
-												<td>Yesterday 01:31 PM</td>
+												<td>
+													<a href="service-details.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
+												</td>
 											</tr>
 											<tr>
-												<td>4</td>
-												<td>13 Sep 2020</td>
+												<td>order-12</td>
+												<td>16/9/2020</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user-04.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user4.jpg">
 														</a>
-														<a href="javascript:void(0);">Ricardo Lung</a>
+														<a href="javascript:void(0);">Đoàn Quang Hải</a>
 													</span>
 												</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-04.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/product/cay-luoi-ho-thai.jpg">
 														</a>
-														<a href="javascript:void(0);">Ricardo Flemings</a>
+														<a href="javascript:void(0);">Cây lưỡi hổ thái</a>
 													</span>
 												</td>
-												<td>Steam Car Wash</td>
-												<td>$14</td>
+												<td>99.000 VNĐ</td>
 												<td>
-													<label class="badge badge-dark">Pending</label>
+													<label class="badge badge-warning">Từ chối bởi người dùng</label>
 												</td>
-												<td>Yesterday 01:29 PM</td>
+												<td>
+													<a href="service-details.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
+												</td>
 											</tr>
 											<tr>
-												<td>5</td>
-												<td>12 Sep 2020</td>
+												<td>order-06</td>
+												<td>16/9/2020</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user-05.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user6.jpg">
 														</a>
-														<a href="javascript:void(0);">Annette Silva</a>
+														<a href="javascript:void(0);">Hà Thị Kim Chi</a>
 													</span>
 												</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-05.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/product/sen-da-kim-cuong.jpg">
 														</a>
-														<a href="javascript:void(0);">Maritza Wasson</a>
+														<a href="javascript:void(0);">Sen đá kim cương</a>
 													</span>
 												</td>
-												<td>House Cleaning Services</td>
-												<td>$100</td>
+												<td>125.000 VNĐ</td>
 												<td>
-													<label class="badge badge-warning">Rejected by User</label>
+													<label class="badge badge-dark">Đang chờ xử lí</label>
 												</td>
-												<td>Yesterday 01:21 PM</td>
+												<td>
+													<a href="service-details.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
+												</td>
 											</tr>
 											<tr>
-												<td>6</td>
-												<td>11 Sep 2020</td>
+												<td>order-07</td>
+												<td>16/9/2020</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user-06.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user12.png">
 														</a>
-														<a href="javascript:void(0);">Stephen Wilson</a>
+														<a href="javascript:void(0);">Thái Linh Mỹ</a>
 													</span>
 												</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-06.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/product/sen-da-mini.jpg">
 														</a>
-														<a href="javascript:void(0);">Marya Ruiz</a>
+														<a href="javascript:void(0);">Sen đá mini</a>
 													</span>
 												</td>
-												<td>Computer & Server AMC Service</td>
-												<td>$80</td>
+												<td>65.000 VNĐ</td>
 												<td>
-													<label class="badge badge-dark">Pending</label>
+													<label class="badge badge-danger">Bị hủy bởi người dùng</label>
 												</td>
-												<td>Yesterday 01:03 PM</td>
+												<td>
+													<a href="service-details.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
+												</td>
 											</tr>
 											<tr>
-												<td>7</td>
-												<td>10 Sep 2020</td>
+												<td>order-08</td>
+												<td>16/9/2020</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user-07.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user14.jpg">
 														</a>
-														<a href="javascript:void(0);">Ryan Rodriguez</a>
+														<a href="javascript:void(0);">Lê Quốc Kiều</a>
 													</span>
 												</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-07.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/product/xuong-rong-tai-tho.jpg">
 														</a>
-														<a href="javascript:void(0);">Richard Hughes</a>
+														<a href="javascript:void(0);">Cây xương rồng tai thỏ</a>
 													</span>
 												</td>
-												<td>Interior Designing</td>
-												<td>$5</td>
+												<td>76.000 VNĐ</td>
 												<td>
-													<label class="badge badge-dark">Pending</label>
+													<label class="badge badge-dark">Đang chờ xử lí</label>
 												</td>
-												<td>10 Sep 2020 08:03 PM</td>
+												<td>
+													<a href="service-details.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
+												</td>
 											</tr>
 											<tr>
-												<td>8</td>
-												<td>9 Sep 2020</td>
+												<td>order-09</td>
+												<td>13/9/2020</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user-08.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user19.jpg">
 														</a>
-														<a href="javascript:void(0);">Lucile Devera</a>
+														<a href="javascript:void(0);">Lý Thanh Na</a>
 													</span>
 												</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-08.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/product/xuong-rong-nui.jpg">
 														</a>
-														<a href="javascript:void(0);">Nina Wilson</a>
+														<a href="javascript:void(0);">Cây xương rồng núi</a>
 													</span>
 												</td>
-												<td>Building Construction Services</td>
-												<td>$75</td>
+												<td>46.000 VNĐ</td>
 												<td>
-													<label class="badge badge-primary">Complete Request</label>
+													<label class="badge badge-primary">Hoàn thành</label>
 												</td>
-												<td>9 Sep 2020 09:38 PM</td>
+												<td>
+													<a href="service-details.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
+												</td>
 											</tr>
 											<tr>
-												<td>9</td>
-												<td>8 Sep 2020</td>
+												<td>order-11</td>
+												<td>16/9/2020</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user-09.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user12.png">
 														</a>
-														<a href="javascript:void(0);">Roland Storey</a>
+														<a href="javascript:void(0);">Quan Thanh Liêm</a>
 													</span>
 												</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-09.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/product/xuong-rong-trung-chim.jpg">
 														</a>
-														<a href="javascript:void(0);">David Morrison</a>
+														<a href="javascript:void(0);">Xương rồng trứng chim</a>
 													</span>
 												</td>
-												<td>Commercial Painting Services</td>
-												<td>$500</td>
+												<td>85.000 VNĐ</td>
 												<td>
-													<label class="badge badge-info">Inprogress</label>
+													<label class="badge badge-info">Đang xử lí</label>
 												</td>
-												<td>8 Sep 2020 09:37 PM</td>
+												<td>
+													<a href="service-details.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
+												</td>
 											</tr>
 											<tr>
-												<td>10</td>
-												<td>7 Sep 2020</td>
+												<td>order-10</td>
+												<td>16/9/2020</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user-10.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/customer/user17.jpg">
 														</a>
-														<a href="javascript:void(0);">Lindsey Parmley</a>
+														<a href="javascript:void(0);">Trần Huỳnh Phúc</a>
 													</span>
 												</td>
 												<td>
 													<span class="table-avatar">
 														<a href="#" class="avatar avatar-sm mr-2">
-															<img class="avatar-img rounded-circle" alt="" src="assets/img/provider/provider-10.jpg">
+															<img class="avatar-img rounded-circle" alt="" src="assets/img/product/cam-nhung.jpg">
 														</a>
-														<a href="javascript:void(0);">Linda Brooks</a>
+														<a href="javascript:void(0);">Cây cẩm nhung</a>
 													</span>
 												</td>
-												<td>Plumbing Services</td>
-												<td>$150</td>
+												<td>125.000 VNĐ</td>
 												<td>
-													<label class="badge badge-danger">Cancelled by Provider</label>
+													<label class="badge badge-info">Đang xử lí</label>
 												</td>
-												<td>7 Sep 2020 06:27 PM</td>
-											</tr> 
+												<td>
+													<a href="service-details.html" class="btn btn-sm bg-info-light">
+														<i class="far fa-eye mr-1"></i> Chi tiết
+													</a>
+												</td>
+											</tr>
 										</tbody>
 									</table>
 								</div>
