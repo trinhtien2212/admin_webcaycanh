@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-	<title>Thêm Danh Mục</title>
+	<title>Sửa thông tin admin</title>
 	<link href="assets/img/icon/icon-logo.png" rel="shortcut icon">
 
 	<!-- Favicons -->
@@ -189,7 +189,7 @@
 						<div class="page-header">
 							<div class="row">
 								<div class="col">
-									<h3 class="page-title">Thêm danh mục</h3>
+									<h3 class="page-title">Sửa thông tin admin</h3>
 								</div>
 							</div>
 						</div>
@@ -199,21 +199,37 @@
 							<div class="card-body">
 							
 								<!-- Form -->
-								<form action="categories.html">
-									<div class="form-group">
-										<label>Tên danh mục</label>
-										<input class="form-control" type="text">
+								<form action="#">
+                                    <div class="form-group row">
+                                        <label class="col-form-label col-md-2">Tên</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-form-label col-md-2">Nơi làm việc</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" value="Thế Giới Cây Cảnh" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-form-label col-md-2">Vị trí</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" value="ĐH Nông Lâm, Thủ Đức" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-form-label col-md-2">Về bản thân</label>
+                                        <div class="col-md-10">
+                                            <textarea rows="5" cols="5" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4">
+										<button class="btn btn-primary" type="submit">Lưu</button>
+										<a href="admin-profile.html" class="btn btn-link">Hủy</a>
 									</div>
-									<div class="form-group">
-										<label>Hình ảnh danh mục</label>
-										<input class="form-control" type="file">
-									</div>
-									<div class="mt-4">
-										<button class="btn btn-primary" type="submit">Thêm danh mục</button>
-										<a href="categories.html" class="btn btn-link">Hủy</a>
-									</div>
-								</form>
-								<!-- Form -->
+                                </form>
+								<!-- /Form -->
 								
 							</div>
 						</div>
