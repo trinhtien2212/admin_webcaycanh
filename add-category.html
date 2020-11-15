@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-	<title>Loại đánh giá</title>
+	<title>Truelysell | Template</title>
 	<link href="assets/img/icon/icon-logo.png" rel="shortcut icon">
 
 	<!-- Favicons -->
@@ -17,9 +17,6 @@
 	<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
 	<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-	<!-- Datatables CSS -->
-	<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
 
 	<!-- Animate CSS -->
 	<link rel="stylesheet" href="assets/css/animate.min.css">
@@ -185,115 +182,39 @@
 		
 		<div class="page-wrapper">
 			<div class="content container-fluid">
-			
-				<!-- Page Header -->
-				<div class="page-header">
-					<div class="row">
-						<div class="col">
-							<h3 class="page-title">Loại đánh giá</h3>
-						</div>
-						<div class="col-auto text-right">
-							<a href="add-ratingstype.html" class="btn btn-primary add-button">
-								<i class="fas fa-plus"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- /Page Header -->
-				
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-xl-8 offset-xl-2">
+					
+						<!-- Page Header -->
+						<div class="page-header">
+							<div class="row">
+								<div class="col">
+									<h3 class="page-title">Add Category</h3>
+								</div>
+							</div>
+						</div>
+						<!-- /Page Header -->
+						
 						<div class="card">
 							<div class="card-body">
-								<div class="table-responsive">
-									<table class="table custom-table mb-0 datatable">
-										<thead>
-											<tr>
-												<th>#</th>
-												<th>Loại đánh giá</th>
-												<th>Tình trạng</th>
-												<th class="text-right">Chỉnh sửa</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td>Rất tốt</td>
-												<td>
-													<div class="status-toggle">
-														<input id="rating_1" class="check" type="checkbox" checked>
-														<label for="rating_1" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													<a href="edit-ratingstype.html" class="table-action-btn btn btn-sm bg-success-light">
-														<i class="far fa-edit mr-1"></i>Chỉnh sửa
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>Tốt</td>
-												<td>
-													<div class="status-toggle">
-														<input id="rating_2" class="check" type="checkbox" checked>
-														<label for="rating_2" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													<a href="edit-ratingstype.html" class="table-action-btn btn btn-sm bg-success-light">
-														<i class="far fa-edit mr-1"></i>Chỉnh sửa
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>Được</td>
-												<td>
-													<div class="status-toggle">
-														<input id="rating_3" class="check" type="checkbox" checked>
-														<label for="rating_3" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													<a href="edit-ratingstype.html" class="table-action-btn btn btn-sm bg-success-light">
-														<i class="far fa-edit mr-1"></i>Chỉnh sửa
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>4</td>
-												<td>Tệ</td>
-												<td>
-													<div class="status-toggle">
-														<input id="rating_4" class="check" type="checkbox">
-														<label for="rating_4" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													<a href="edit-ratingstype.html" class="table-action-btn btn btn-sm bg-success-light">
-														<i class="far fa-edit mr-1"></i> Chỉnh sửa
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>5</td>
-												<td>Rất tệ</td>
-												<td>
-													<div class="status-toggle">
-														<input id="rating_5" class="check" type="checkbox">
-														<label for="rating_5" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													<a href="edit-ratingstype.html" class="table-action-btn btn btn-sm bg-success-light">
-														<i class="far fa-edit mr-1"></i>Chỉnh sửa
-													</a>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
+							
+								<!-- Form -->
+								<form action="categories.html">
+									<div class="form-group">
+										<label>Category Name</label>
+										<input class="form-control" type="text">
+									</div>
+									<div class="form-group">
+										<label>Category Image</label>
+										<input class="form-control" type="file">
+									</div>
+									<div class="mt-4">
+										<button class="btn btn-primary" type="submit">Add Category</button>
+										<a href="categories.html" class="btn btn-link">Cancel</a>
+									</div>
+								</form>
+								<!-- Form -->
+								
 							</div>
 						</div>
 					</div>
@@ -301,7 +222,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- jQuery -->
 	<script src="assets/js/jquery-3.5.0.min.js"></script>
 
@@ -309,22 +230,11 @@
 	<script src="assets/js/popper.min.js"></script>
 	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
-	<!-- Datepicker Core JS -->
-	<script src="assets/js/moment.min.js"></script>
-	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-
 	<!-- Slimscroll JS -->
 	<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-	<!-- Datatables JS -->
-	<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
-	<script src="assets/plugins/datatables/datatables.min.js"></script>
-
-	<!-- Select2 JS -->
-	<script src="assets/js/select2.min.js"></script>
-
 	<!-- Custom JS -->
-	<script src="assets/js/admin.js"></script> 
+	<script src="assets/js/admin.js"></script>
 
 </body>
 
