@@ -153,13 +153,19 @@
 							<div class="row filter-row">
 								<div class="col-sm-6 col-md-3">
 									<div class="form-group">
-										<label>Service</label>
+										<label>Tên nhà cung cấp</label>
 										<input class="form-control" type="text">
 									</div>
 								</div>
 								<div class="col-sm-6 col-md-3">
 									<div class="form-group">
-										<label>From Date</label>
+										<label>Sản phẩm	</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<div class="form-group">
+										<label>Từ ngày</label>
 										<div class="cal-icon">
 											<input class="form-control datetimepicker" type="text">
 										</div>
@@ -167,7 +173,7 @@
 								</div>
 								<div class="col-sm-6 col-md-3">
 									<div class="form-group">
-										<label>To Date</label>
+										<label>Đến ngày</label>
 										<div class="cal-icon">
 											<input class="form-control datetimepicker" type="text">
 										</div>
@@ -175,7 +181,7 @@
 								</div>
 								<div class="col-sm-6 col-md-3">
 									<div class="form-group">
-										<button class="btn btn-primary btn-block" type="submit">Submit</button>
+										<button class="btn btn-primary btn-block" type="submit">Chọn</button>
 									</div>
 								</div>
 							</div>
@@ -194,11 +200,9 @@
 											<tr>
 												<th>ID</th>
 												<th>Tên nhà cung cấp</th>
-												<th>Tên sản phẩm</th>
+												<th>Hình</th>
 												<th>address</th>
 												<th>Danh mục</th>
-												<th>Số lượng</th>
-												<th>Thành tiền</th>
 												<th>Ngày</th>
 												<th>Trạng thái</th>
 												<th>Hành động</th>
@@ -212,11 +216,9 @@
 														<img class="rounded service-img mr-1" src="assets/img/services/service-01.jpg" alt=""> Công Ty Cổ Phần Điểm Nhấn Xanh
 													</a>
 												</td>
-												<td>Sen đá mini kèm chậu</td>
+												<td><img class="rounded service-img mr-1" src="assets/img/categories/cay-de-ban.jpg" alt="Hình ảnh danh mục"></td>
 												<td> 49 Lê Thị Hồng Gấm, P Hòa Cường Bắc, Q Hải Châu, Tp. Đà Nẵng</td>
 												<td>Cây để bàn</td>
-												<td>1</td>
-												<td>50.000VNĐ	</td>
 												<td>13 Tháng Chín 2020</td>
 												<td>
 													<div class="status-toggle">
@@ -237,11 +239,10 @@
 														<img class="rounded service-img mr-1" src="assets/img/services/service-02.jpg" alt=""> Ngoại Thất Xanh
 													</a>
 												</td>
-												<td>Cây Bình An</td>
+												<td><img class="rounded service-img mr-1" src="assets/img/categories/cay-day-leo.jpg" alt="Hình ảnh danh mục"></td>
 												<td>Quốc Lộ 22, Xã An Tịnh, Huyện Trảng Bàng, Tây Ninh</td>
 												<td>Cây dây leo</td>
-												<td>1</td>
-												<td>149.000 VNĐ</td>
+											
 												<td>12 Tháng Chín 2020</td>
 												<td>
 													<div class="status-toggle">
@@ -262,11 +263,11 @@
 														<img class="rounded service-img mr-1" src="assets/img/services/service-03.jpg" alt=""> Vườn Lan Quý Phú Lâm
 													</a>
 												</td>
-												<td>Cây Cúc Mai</td>
+												<td><img class="rounded service-img mr-1" src="assets/img/categories/cay-tet.jpg" alt="Hình ảnh danh mục"></td>
+												
 												<td>L20, Cư Xá Phú Lâm A, Kinh Dương Vương, P. 12, Q. 6, Tp. Hồ Chí Minh (TPHCM)</td>
 												<td>Cây tết</td>
-												<td>1</td>
-												<td>563.000 VNĐ</td>
+											
 												<td>11 Tháng Chín 2020</td>
 												<td>
 													<div class="status-toggle">
@@ -287,11 +288,11 @@
 														<img class="rounded service-img mr-1" src="assets/img/services/service-04.jpg" alt=""> Cây Xanh Trần Phương
 													</a>
 												</td>
-												<td>Cây Phú Qúy</td>
+												<td><img class="rounded service-img mr-1" src="assets/img/categories/cay-thuy-sinh.jpg" alt="Hình ảnh danh mục"></td>
+												
 												<td>Thôn Minh Kha, Xã Đồng Thái, Huyện An Dương, Tp. Hải Phòng</td>
 												<td>Cây thủy sinhh</td>
-												<td>1</td>
-												<td>49.000 VNĐ</td>
+											
 												<td>10 Tháng Chín 2020</td>
 												<td>
 													<div class="status-toggle">
@@ -312,11 +313,10 @@
 														<img class="rounded service-img mr-1" src="assets/img/services/service-05.jpg" alt=""> Cây Xanh Thiên Xanh Nam Long
 													</a>
 												</td>
-												<td>Cây Hoàng Tử Bạch Mã</td>
+												<td><img class="rounded service-img mr-1" src="assets/img/categories/cay-trong-nha.jpg" alt="Hình ảnh danh mục"></td>
 												<td>Số 36/10 Tổ 22, Ấp Trầu, X. Phước Thiền, H. Nhơn Trạch, Đồng Nai</td>
 												<td>Cây trong nhà</td>
-												<td>1</td>
-												<td>350.000 VNĐ</td>
+												
 												<td>9 Tháng Chín 2020</td>
 												<td>
 													<div class="status-toggle">
@@ -337,11 +337,11 @@
 														<img class="rounded service-img mr-1" src="assets/img/services/service-06.jpg" alt=""> Cây Xanh Minh Phương 
 													</a>
 												</td>
-												<td>Cây Ánh Dương</td>
+												<td><img class="rounded service-img mr-1" src="assets/img/categories/cay-trong-nha.jpg" alt="Hình ảnh danh mục"></td>
+
 												<td>Thôn Ngọc Bộ, X. Long Hưng, H. Văn Giang, Hưng Yên</td>
 												<td>Cây ngoài vườn</td>
-												<td>1</td>
-												<td>250.000 VNĐ</td>
+							
 												<td>8 Tháng Chín 2020</td>
 												<td>
 													<div class="status-toggle">
