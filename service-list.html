@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-	<title>Truelysell | Template</title>
+	<title>Nhà cung cấp</title>
 	<link href="assets/img/icon/icon-logo.png" rel="shortcut icon">
 
 	<!-- Favicons -->
@@ -135,7 +135,7 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h3 class="page-title">Services</h3>
+							<h3 class="page-title">Nhà cung cấp</h3>
 						</div>
 						<div class="col-auto text-right">
 							<a class="btn btn-white filter-btn" href="javascript:void(0);" id="filter_search">
@@ -153,13 +153,19 @@
 							<div class="row filter-row">
 								<div class="col-sm-6 col-md-3">
 									<div class="form-group">
-										<label>Service</label>
+										<label>Tên nhà cung cấp</label>
 										<input class="form-control" type="text">
 									</div>
 								</div>
 								<div class="col-sm-6 col-md-3">
 									<div class="form-group">
-										<label>From Date</label>
+										<label>Sản phẩm	</label>
+										<input class="form-control" type="text">
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<div class="form-group">
+										<label>Từ ngày</label>
 										<div class="cal-icon">
 											<input class="form-control datetimepicker" type="text">
 										</div>
@@ -167,7 +173,7 @@
 								</div>
 								<div class="col-sm-6 col-md-3">
 									<div class="form-group">
-										<label>To Date</label>
+										<label>Đến ngày</label>
 										<div class="cal-icon">
 											<input class="form-control datetimepicker" type="text">
 										</div>
@@ -175,7 +181,7 @@
 								</div>
 								<div class="col-sm-6 col-md-3">
 									<div class="form-group">
-										<button class="btn btn-primary btn-block" type="submit">Submit</button>
+										<button class="btn btn-primary btn-block" type="submit">Chọn</button>
 									</div>
 								</div>
 							</div>
@@ -192,14 +198,14 @@
 									<table class="table table-hover table-center mb-0 datatable">
 										<thead>
 											<tr>
-												<th>#</th>
-												<th>Service</th>
-												<th>Location</th>
-												<th>Category</th>
-												<th>Amount</th>
-												<th>Date</th>
-												<th>Status</th>
-												<th>Action</th>
+												<th>ID</th>
+												<th>Tên nhà cung cấp</th>
+												<th>Hình</th>
+												<th>address</th>
+												<th>Danh mục</th>
+												<th>Ngày</th>
+												<th>Trạng thái</th>
+												<th>Hành động</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -207,13 +213,13 @@
 												<td>1</td>
 												<td>
 													<a href="service-details.html">
-														<img class="rounded service-img mr-1" src="assets/img/services/service-01.jpg" alt=""> Toughened Glass Fitting Services
+														<img class="rounded service-img mr-1" src="assets/img/services/service-01.jpg" alt=""> Công Ty Cổ Phần Điểm Nhấn Xanh
 													</a>
 												</td>
-												<td>Wayne, New Jersey</td>
-												<td>Cleaning</td>
-												<td>$25</td>
-												<td>13 Sep 2020</td>
+												<td><img class="rounded service-img mr-1" src="assets/img/categories/cay-de-ban.jpg" alt="Hình ảnh danh mục"></td>
+												<td> 49 Lê Thị Hồng Gấm, P Hòa Cường Bắc, Q Hải Châu, Tp. Đà Nẵng</td>
+												<td>Cây để bàn</td>
+												<td>13 Tháng Chín 2020</td>
 												<td>
 													<div class="status-toggle">
 														<input id="service_1" class="check" type="checkbox">
@@ -222,7 +228,7 @@
 												</td>
 												<td>
 													<a href="service-details.html" class="btn btn-sm bg-info-light">
-														<i class="far fa-eye mr-1"></i> View
+														<i class="far fa-eye mr-1"></i> Chi tiết
 													</a>
 												</td>
 											</tr>
@@ -230,13 +236,14 @@
 												<td>2</td>
 												<td>
 													<a href="service-details.html">
-														<img class="rounded service-img mr-1" src="assets/img/services/service-02.jpg" alt=""> Car Repair Services
+														<img class="rounded service-img mr-1" src="assets/img/services/service-02.jpg" alt=""> Ngoại Thất Xanh
 													</a>
 												</td>
-												<td>Hanover, Maryland</td>
-												<td>Automobile</td>
-												<td>$50</td>
-												<td>12 Sep 2020</td>
+												<td><img class="rounded service-img mr-1" src="assets/img/categories/cay-day-leo.jpg" alt="Hình ảnh danh mục"></td>
+												<td>Quốc Lộ 22, Xã An Tịnh, Huyện Trảng Bàng, Tây Ninh</td>
+												<td>Cây dây leo</td>
+											
+												<td>12 Tháng Chín 2020</td>
 												<td>
 													<div class="status-toggle">
 														<input id="service_2" class="check" type="checkbox" checked>
@@ -245,7 +252,7 @@
 												</td>
 												<td>
 													<a href="service-details.html" class="btn btn-sm bg-info-light">
-														<i class="far fa-eye mr-1"></i> View
+														<i class="far fa-eye mr-1"></i> Chi tiết
 													</a>
 												</td>
 											</tr>
@@ -253,13 +260,15 @@
 												<td>3</td>
 												<td>
 													<a href="service-details.html">
-														<img class="rounded service-img mr-1" src="assets/img/services/service-03.jpg" alt=""> Electric Panel Repairing Service
+														<img class="rounded service-img mr-1" src="assets/img/services/service-03.jpg" alt=""> Vườn Lan Quý Phú Lâm
 													</a>
 												</td>
-												<td>Kalispell, Montana</td>
-												<td>Electrical</td>
-												<td>$45</td>
-												<td>11 Sep 2020</td>
+												<td><img class="rounded service-img mr-1" src="assets/img/categories/cay-tet.jpg" alt="Hình ảnh danh mục"></td>
+												
+												<td>L20, Cư Xá Phú Lâm A, Kinh Dương Vương, P. 12, Q. 6, Tp. Hồ Chí Minh (TPHCM)</td>
+												<td>Cây tết</td>
+											
+												<td>11 Tháng Chín 2020</td>
 												<td>
 													<div class="status-toggle">
 														<input id="service_3" class="check" type="checkbox">
@@ -268,7 +277,7 @@
 												</td>
 												<td>
 													<a href="service-details.html" class="btn btn-sm bg-info-light">
-														<i class="far fa-eye mr-1"></i> View
+														<i class="far fa-eye mr-1"></i> Chi tiết
 													</a>
 												</td>
 											</tr>
@@ -276,13 +285,15 @@
 												<td>4</td>
 												<td>
 													<a href="service-details.html">
-														<img class="rounded service-img mr-1" src="assets/img/services/service-04.jpg" alt=""> Steam Car Wash
+														<img class="rounded service-img mr-1" src="assets/img/services/service-04.jpg" alt=""> Cây Xanh Trần Phương
 													</a>
 												</td>
-												<td>Electra, Texas</td>
-												<td>Car Wash</td>
-												<td>$14</td>
-												<td>10 Sep 2020</td>
+												<td><img class="rounded service-img mr-1" src="assets/img/categories/cay-thuy-sinh.jpg" alt="Hình ảnh danh mục"></td>
+												
+												<td>Thôn Minh Kha, Xã Đồng Thái, Huyện An Dương, Tp. Hải Phòng</td>
+												<td>Cây thủy sinhh</td>
+											
+												<td>10 Tháng Chín 2020</td>
 												<td>
 													<div class="status-toggle">
 														<input id="service_4" class="check" type="checkbox" checked>
@@ -291,7 +302,7 @@
 												</td>
 												<td>
 													<a href="service-details.html" class="btn btn-sm bg-info-light">
-														<i class="far fa-eye mr-1"></i> View
+														<i class="far fa-eye mr-1"></i> Chi tiết
 													</a>
 												</td>
 											</tr>
@@ -299,13 +310,14 @@
 												<td>5</td>
 												<td>
 													<a href="service-details.html">
-														<img class="rounded service-img mr-1" src="assets/img/services/service-05.jpg" alt=""> House Cleaning Service
+														<img class="rounded service-img mr-1" src="assets/img/services/service-05.jpg" alt=""> Cây Xanh Thiên Xanh Nam Long
 													</a>
 												</td>
-												<td>Sylvester, Georgia</td>
-												<td>Cleaning</td>
-												<td>$100</td>
-												<td>9 Sep 2020</td>
+												<td><img class="rounded service-img mr-1" src="assets/img/categories/cay-trong-nha.jpg" alt="Hình ảnh danh mục"></td>
+												<td>Số 36/10 Tổ 22, Ấp Trầu, X. Phước Thiền, H. Nhơn Trạch, Đồng Nai</td>
+												<td>Cây trong nhà</td>
+												
+												<td>9 Tháng Chín 2020</td>
 												<td>
 													<div class="status-toggle">
 														<input id="service_5" class="check" type="checkbox" checked>
@@ -314,7 +326,7 @@
 												</td>
 												<td>
 													<a href="service-details.html" class="btn btn-sm bg-info-light">
-														<i class="far fa-eye mr-1"></i> View
+														<i class="far fa-eye mr-1"></i> Chi tiết
 													</a>
 												</td>
 											</tr>
@@ -322,13 +334,15 @@
 												<td>6</td>
 												<td>
 													<a href="service-details.html">
-														<img class="rounded service-img mr-1" src="assets/img/services/service-06.jpg" alt=""> Computer & Server AMC Service
+														<img class="rounded service-img mr-1" src="assets/img/services/service-06.jpg" alt=""> Cây Xanh Minh Phương 
 													</a>
 												</td>
-												<td>Los Angeles, California</td>
-												<td>Computer</td>
-												<td>$80</td>
-												<td>8 Sep 2020</td>
+												<td><img class="rounded service-img mr-1" src="assets/img/categories/cay-trong-nha.jpg" alt="Hình ảnh danh mục"></td>
+
+												<td>Thôn Ngọc Bộ, X. Long Hưng, H. Văn Giang, Hưng Yên</td>
+												<td>Cây ngoài vườn</td>
+							
+												<td>8 Tháng Chín 2020</td>
 												<td>
 													<div class="status-toggle">
 														<input id="service_6" class="check" type="checkbox">
@@ -337,145 +351,7 @@
 												</td>
 												<td>
 													<a href="service-details.html" class="btn btn-sm bg-info-light">
-														<i class="far fa-eye mr-1"></i> View
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>7</td>
-												<td>
-													<a href="service-details.html">
-														<img class="rounded service-img mr-1" src="assets/img/services/service-07.jpg" alt=""> Interior Designing
-													</a>
-												</td>
-												<td>Hanover, Maryland</td>
-												<td>Interior</td>
-												<td>$5</td>
-												<td>7 Sep 2020</td>
-												<td>
-													<div class="status-toggle">
-														<input id="service_7" class="check" type="checkbox" checked>
-														<label for="service_7" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td>
-													<a href="service-details.html" class="btn btn-sm bg-info-light">
-														<i class="far fa-eye mr-1"></i> View
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>8</td>
-												<td>
-													<a href="service-details.html">
-														<img class="rounded service-img mr-1" src="assets/img/services/service-08.jpg" alt=""> Building Construction Services
-													</a>
-												</td>
-												<td>Burr Ridge, Illinois</td>
-												<td>Construction</td>
-												<td>$75</td>
-												<td>6 Sep 2020</td>
-												<td>
-													<div class="status-toggle">
-														<input id="service_8" class="check" type="checkbox" checked>
-														<label for="service_8" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td>
-													<a href="service-details.html" class="btn btn-sm bg-info-light">
-														<i class="far fa-eye mr-1"></i> View
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>9</td>
-												<td>
-													<a href="service-details.html">
-														<img class="rounded service-img mr-1" src="assets/img/services/service-09.jpg" alt=""> Commercial Painting Services
-													</a>
-												</td>
-												<td>Huntsville, Alabama</td>
-												<td>Painting</td>
-												<td>$500</td>
-												<td>5 Sep 2020</td>
-												<td>
-													<div class="status-toggle">
-														<input id="service_9" class="check" type="checkbox" checked>
-														<label for="service_9" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td>
-													<a href="service-details.html" class="btn btn-sm bg-info-light">
-														<i class="far fa-eye mr-1"></i> View
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>10</td>
-												<td>
-													<a href="service-details.html">
-														<img class="rounded service-img mr-1" src="assets/img/services/service-10.jpg" alt=""> Plumbing Services
-													</a>
-												</td>
-												<td>Richmond, Virginia</td>
-												<td>Plumbing</td>
-												<td>$150</td>
-												<td>4 Sep 2020</td>
-												<td>
-													<div class="status-toggle">
-														<input id="service_10" class="check" type="checkbox" checked>
-														<label for="service_10" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td>
-													<a href="service-details.html" class="btn btn-sm bg-info-light">
-														<i class="far fa-eye mr-1"></i> View
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>11</td>
-												<td>
-													<a href="service-details.html">
-														<img class="rounded service-img mr-1" src="assets/img/services/service-11.jpg" alt=""> Wooden Carpentry Work
-													</a>
-												</td>
-												<td>Columbus, Alabama</td>
-												<td>Carpentry</td>
-												<td>$32</td>
-												<td>3 Sep 2020</td>
-												<td>
-													<div class="status-toggle">
-														<input id="service_11" class="check" type="checkbox" checked>
-														<label for="service_11" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td>
-													<a href="service-details.html" class="btn btn-sm bg-info-light">
-														<i class="far fa-eye mr-1"></i> View
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>12</td>
-												<td>
-													<a href="service-details.html">
-														<img class="rounded service-img mr-1" src="assets/img/services/service-12.jpg" alt=""> Air Conditioner Service
-													</a>
-												</td>
-												<td>Vancouver, Washington</td>
-												<td>Appliance</td>
-												<td>$54</td>
-												<td>2 Sep 2020</td>
-												<td>
-													<div class="status-toggle">
-														<input id="service_12" class="check" type="checkbox" checked>
-														<label for="service_12" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td>
-													<a href="service-details.html" class="btn btn-sm bg-info-light">
-														<i class="far fa-eye mr-1"></i> View
+														<i class="far fa-eye mr-1"></i> Chi tiết
 													</a>
 												</td>
 											</tr>
