@@ -143,19 +143,43 @@
 							
 								<!-- Form -->
 								<form action="categories.html">
-									<div class="form-group">
-										<label>Tên danh mục</label>
-										<input class="form-control" type="text">
+                                    <div class="form-group row">
+                                        <label class="col-form-label col-md-2">ID</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-form-label col-md-2">Tên danh mục</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control">
+                                        </div>
 									</div>
-									<div class="form-group">
-										<label>Hình ảnh danh mục</label>
-										<input class="form-control" type="file">
+									<div class="form-group row">
+										<label class="col-form-label col-md-2">Hình ảnh</label>
+										<div class="col-md-10">
+											<input class="form-control" type="file">
+										</div>
 									</div>
-									<div class="mt-4">
-										<button class="btn btn-primary" type="submit">Thêm danh mục</button>
-										<a href="categories.html" class="btn btn-link">Hủy</a>
+                                    <div class="form-group row">
+                                        <label class="col-form-label col-md-2">Số lượng</label>
+                                        <div class="col-md-10">
+                                            <input type="number" class="form-control">
+                                        </div>
 									</div>
-								</form>
+									<div class="form-group row">
+                                        <label class="col-form-label col-md-2">Admin</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" disabled>
+                                        </div>
+									</div>
+
+                                    <div class="mt-4">
+										<button class="btn btn-primary" type="submit">Thêm</button>
+										<a href="add-admin.html" class="btn btn-link">Hủy</a>
+									</div>
+                                </form>
+								<!-- /Form -->
 								<!-- Form -->
 								
 							</div>
