@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-	<title>Thêm Nhà cung cấp</title>
+	<title>Thêm vận chuyển</title>
 	<link href="assets/img/icon/icon-logo.png" rel="shortcut icon">
 
 	<!-- Favicons -->
@@ -101,8 +101,8 @@
                             <a href="#"><i class="fas fa-shopping-cart"></i><span>Bán hàng</span> <span class="menu-arrow"></span></a>
                             <ul style="display: none;">
                                 <li><a href="total-report.html">Danh sách đặt hàng</a></li>
-                                <li><a href="shipments.html">Vận chuyển</a></li>
-                                <li class="active"><a href="return-request.html">Bảo hành</a></li>
+                                <li><a href="shipments.html" class="active">Vận chuyển</a></li>
+                                <li><a href="return-request.html">Bảo hành</a></li>
                                 <li><a href="review-reports.html">Đánh giá sản phẩm</a></li>
                                 
                                 
@@ -136,16 +136,8 @@
 				<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h3 class="page-title">Thêm nhà cung cấp</h3>
+							<h3 class="page-title">Thêm vận chuyển</h3>
 						</div>
-						<!-- <div class="col-auto text-right">
-							<a class="btn btn-white filter-btn" href="javascript:void(0);" id="filter_search">
-								<i class="fas fa-filter"></i>
-							</a>
-							<a href="add-category.html" class="btn btn-primary add-button ml-3">
-								<i class="fas fa-plus"></i>
-							</a>
-						</div> -->
 					</div>
 				</div>
 				<!-- /Page Header -->
@@ -220,52 +212,41 @@
                                         <!-- Thay đổi code ở đây Thay đổi theo file word -->
                                         <!-- Form -->
 								<form action="categories.html">
-									
-									
-                                    <div class="form-group">
-										<label>ID</label>
-										<input class="form-control" type="text" value="">
-                                    </div>
-                                    <div class="form-group">
-											<label>Tên</label>
-										<input class="form-control" type="text" value="">
-                                    </div>
-                                    <div class="form-group">
-										<label>Sản phẩm</label>
-										<input class="form-control" type="text" value="">
-                                    </div>
-                                    <div class="form-group">
-										<label>Ảnh</label>
-										<input class="form-control" type="file">
-									</div>
 									<div class="form-group">
-										<div class="avatar">
-											<img class="avatar-img rounded" alt="" src="">
-										</div>
+                                        <label>Ảnh</label><br>
+										<img class=" avatar avatar-img rounded" alt="" src="assets/img/categories/cay-de-ban.jpg">
 									</div>
-									<div class="form-group">
-										<label>Địa chỉ</label>
-										<input class="form-control" type="text" value="49 Lê Thị Hồng Gấm, P Hòa Cường Bắc, Q Hải Châu, Tp. Đà Nẵng">
+                                    <div class="form-group">
+										<label>Mã vận chuyển</label>
+										<input class="form-control" type="text" >
                                     </div>
                                     <div class="form-group">
-										<label>Danh mục</label><br>
-										<select class="form-control select">
-											<option>Chọn Danh Mục</option>
-											<option>Cây để bàn</option>
-											<option>Cây dây leo</option>
-                                            <option>Cây tết</option>
-                                            <option>Cây trong nhà</option>
-                                            <option>Cây thủy sinh</option>
-                                            <option>Cây Ngoài vườn</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label>Giá</label>
-										<input class="form-control" type="text" value="">
-									</div>
+										<label>Ngày vận chuyển</label>
+										<input class="form-control" type="text" >
+                                    </div>
+                                    <div class="form-group">
+										<label>Khối lượng</label>
+										<input class="form-control" type="text" >
+                                    </div>
+                                    <div class="form-group">
+										<label>Mã sản phẩm</label>
+										<input class="form-control" type="text" >
+                                    </div>
+                                    <div class="form-group">
+										<label>Mã khách hàng</label>
+										<input class="form-control" type="text" >
+                                    </div>
+                                    <div class="form-group">
+										<label>Tên khách hàng</label>
+										<input class="form-control" type="text" >
+                                    </div>
+                                    <div class="form-group">
+										<label>Trạng thái</label>
+										<input class="form-control" type="text">  
+                                    </div>
 									<div class="mt-4">
-										<button class="btn btn-primary" type="submit">Lưu thay đổi</button>
-										<a href="categories.html" class="btn btn-link">Hủy</a>
+										<button class="btn btn-primary" type="submit">Save Changes</button>
+										<a href="categories.html" class="btn btn-link">Cancel</a>
 									</div>
 								</form>
 								<!-- /Form -->
