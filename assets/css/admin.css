@@ -40,7 +40,7 @@ Version      : 1.0
 	1. General
 -----------------------*/
 
-@font-face {
+/* @font-face {
 	font-family: 'CircularStd';
 	font-style: normal;
 	font-weight: 400;
@@ -95,16 +95,30 @@ Version      : 1.0
 	font-weight: 800;
 	src: local('Circular Std Black Italic'), url('../fonts/CircularStd-BlackItalic.woff') format('woff');
 }
-
+*/
 @font-face {
 	font-family: 'Material Icons';
 	font-style: normal;
 	font-weight: 400;
-	src: url(../fonts/MaterialIcons-Regular.eot);
+	src: url(../fonts/MaterialIcons-Regular.eot); 
 	/* For IE6-8 */
 	src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/MaterialIcons-Regular.woff2) format('woff2'), url(../fonts/MaterialIcons-Regular.woff) format('woff'), url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
 }
-
+@font-face{
+	src: url(../fonts/Roboto-Light.ttf);
+	font-family: roboto-light;
+  }
+  @font-face{
+	src: url(../fonts/Roboto-Bold.ttf);
+	font-family: roboto-bold;
+  }
+  @font-face{
+	src: url(../fonts/Roboto-Regular.ttf);
+	font-family: roboto-regular;
+  }
+  *{
+	font-family: roboto-regular;
+  }
 html {
 	height: 100%;
 }
@@ -112,7 +126,7 @@ html {
 body {
 	background-color: #f8f9fa;
 	color: #333;
-	font-family: 'CircularStd', sans-serif;
+	font-family: roboto-regular;
 	font-size: 1rem;
 	height: 100%;
 	line-height: 1.5;
@@ -125,7 +139,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'CircularStd', sans-serif;
+	font-family: roboto-bold;
 	margin-top: 0;
 }
 
@@ -4406,13 +4420,13 @@ small.help-block {
 .fc-toolbar h2 {
 	font-size: 18px;
 	font-weight: 600;
-	font-family: 'Roboto', sans-serif;
+	font-family: roboto-bold;
 	line-height: 30px;
 	text-transform: uppercase;
 }
 
 .fc-day-grid-event .fc-time {
-	font-family: 'Roboto', sans-serif;
+	font-family: roboto-bold;
 }
 
 .fc-day {
@@ -4505,13 +4519,13 @@ small.help-block {
 .fc-basic-view td.fc-week-number span {
 	padding-right: 8px;
 	font-weight: 700;
-	font-family: 'Roboto', sans-serif;
+	font-family: roboto-light;
 }
 
 .fc-basic-view td.fc-day-number {
 	padding-right: 8px;
 	font-weight: 700;
-	font-family: 'Roboto', sans-serif;
+	font-family: roboto-regular;
 }
 
 .event-form .input-group .form-control {
